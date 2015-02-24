@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hello World!</title>
+		<title>Upload File</title>
 	</head>
 	<body>
 		<h1>Upload a file here:</h1>
