@@ -1,17 +1,32 @@
 <?php
-// location to save file
-$folder = "uploads/";
+session_start();
+// base uploads directory
+$basePath = "./uploads/";
 
-// name of the file in temporary storage
-$tempName = $_FILES['uploadedFile']['tmp_name'];
+// each "user" should have own directory, so similarly named files don't conflict
+if( !$_SESSION["user_id"] ) {
+	// redirect to initial page if user doesn't have an id yet
+	header('Location: index.php');
+	die();
+}
+// user's directory will be their id.
+$userdir = $_SESSION["user_id"] . '/';
+$targetFolder = $basePath . $userdir;
+
+// create folder if it doesn't exist
+if( !(is_dir($targetFolder)) ) {
+	mkdir($targetFolder, '766', true);
+	// make sure folder has correct permissions
+	chmod($targetFolder, 0766);
+}
 
 // actual filename
 $filename = basename( $_FILES['uploadedFile']['name'] );
 
 // move file from temp storage to permanent location in $folder
-$path = $folder . $filename;
+$path = $targetFolder . $filename;
 
-if(move_uploaded_file($tempName, $path)) {
+if(move_uploaded_file($_FILES['uploadedFile']['tmp_name'], $path)) {
 	echo "$filename uploaded!";
 	echo "<br /><a href=$path>View File</a>";
 }

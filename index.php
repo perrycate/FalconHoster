@@ -1,3 +1,12 @@
+<?php
+session_start();
+if( $_SESSION["user_id"] === null ) {
+	// generate temporary id to identify this particular user
+	// collisions where two users get the same id are possible, but unlikely
+	$_SESSION["user_id"] = uniqid();
+	// good enough!
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,6 +20,6 @@
 			<input type="submit" value="Upload" />
 		</form>
 		<br />
-		<a href="./uploads">View uploaded files</a>
+		<?php echo "<a href='./uploads/" . $_SESSION["user_id"] ."'>" ?>View uploaded files</a>
 	</body>
 </html>
