@@ -10,5 +10,7 @@
 			<br />
 			<input type="submit" value="Upload" />
 		</form>
+		<br />
+		<a href="./uploads">View uploaded files</a>
 	</body>
 </html>
