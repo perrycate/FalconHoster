@@ -2,25 +2,24 @@ Falcon Hoster:
 
 VERY simple php page to upload files
 
-We will use this to serve php files in development, since we can't install wamp on
-the school computers.
+We will use this to serve php files in development, since we can't install
+wamp on the school computers.
 
 USAGE:
 1. Clone repo into WAMP folder
 2. Make sure WAMP is running
 3. Click the WAMP icon, 'put online' or something like that.
-4. Open command prompt, type 'ipconfig' - the internal ip address (sorry, can't
-	remember exactly what it will be called atm, but should look like 192.168.__.___
-	or something) is what you need.
-5. Anyone that needs to test that file can upload it to this computer by typing
-	'[internal ip address]/FalconHoster/index.php'
+4. Open command prompt, type 'ipconfig' - the internal ip address (sorry,
+    can't remember exactly what it will be called atm, but should look 
+    like 192.168.__.___	or something) is what you need.
+5. Anyone that needs to test that file can upload it to this computer by 
+    typing '[internal ip address]/FalconHoster/index.php'
 6. After uploading file, you can access it from
 	'[internal ip address]/FalconHoster/uploads/[filename]'
 
-
 WARNING:
-	DO NOT use this on a public server (eg DigitalOcean). It is horribly insecure.
-	Just run it from someone's PC at the meetings.
+	DO NOT use this on a public server (eg DigitalOcean). It is horribly 
+    insecure. Just run it from someone's PC at the meetings.
 
 TODO:
 	User accounts
