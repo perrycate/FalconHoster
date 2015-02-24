@@ -13,6 +13,7 @@ $path = $folder . $filename;
 
 if(move_uploaded_file($tempName, $path)) {
 	echo "$filename uploaded!";
+	echo "<br /><a href=$path>View File</a>";
 }
 else {
 	echo "Upload failed!";
