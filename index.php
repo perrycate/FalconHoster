@@ -10,7 +10,8 @@ if(isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Upload File</title>
+        <link rel="icon" href="favicon.png">
+		<title>FalconHoster | Upload File</title>
 	</head>
 	<body>
 		<h1>Upload a file here:</h1>
