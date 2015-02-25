@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user_id"])) {
+if(!isset($_SESSION["user_id"])) {
 	// generate temporary id to identify this particular user
 	// collisions where two users get the same id are possible, but unlikely
 	$_SESSION["user_id"] = uniqid();
@@ -22,7 +22,7 @@ if(isset($_SESSION["user_id"])) {
 		</form>
 		<br />
 		<?php 
-            if (isset($_SESSION["user_id"])) {
+            if (!isset($_SESSION["user_id"])) {
                 echo "<a href='./uploads/" . $_SESSION["user_id"] ."'>View uploaded files</a>";
             }
         ?>
