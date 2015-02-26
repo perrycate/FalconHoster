@@ -1,14 +1,9 @@
 <?php
 session_start();
 if(!isset($_SESSION["user_id"])) {
-	// generate temporary id to identify this particular user
-	// collisions where two users get the same id are possible, but unlikely
+	// generate id to identify this particular user
 	$_SESSION["user_id"] = uniqid();
 	// good enough!
-    $_SESSION["firsttime"] = true; //Is this your first time visiting the page? (i.e. do I need to show the "View uploaded files" link?)
-}
-else {
-    $_SESSION["firsttime"] = false;
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +30,7 @@ else {
                 init: function() {
                     this.on("addedfile", function(file) {
                         var link = document.createElement("a");
-                        link.setAttribute("href", "./uploads/<?php if($_SESSION["firsttime"] === false){echo $_SESSION["user_id"];}?>");
+                        link.setAttribute("href", "./uploads/<?php echo $_SESSION["user_id"] ?>");
                         link.innerHTML = "View uploaded files";
                         document.body.appendChild(link);
                     });
