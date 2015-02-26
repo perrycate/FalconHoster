@@ -1,0 +1,54 @@
+* {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+    background: rgb(230, 230, 230);
+}
+
+.dropzone {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5%;
+    width: 90%;
+    height: 70%;
+    background: rgb(230, 230, 230);
+    -webkit-transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -ms-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+}
+
+.dropzone:hover {
+    background: rgb(220, 220, 220);
+    -webkit-transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -ms-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+}
+
+.dz-preview {
+    background: rgb(210, 210, 210) !important;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    padding-top: 5vh;
+}
