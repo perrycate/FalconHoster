@@ -34,7 +34,6 @@ else {
                 paramName: "uploadedFile",
                 init: function() {
                     this.on("addedfile", function(file) {
-                        alert("done");
                         var link = document.createElement("a");
                         link.setAttribute("href", "./uploads/<?php if($_SESSION["firsttime"] === false){echo $_SESSION["user_id"];}?>");
                         link.innerHTML = "View uploaded files";
