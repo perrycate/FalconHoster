@@ -1,5 +1,4 @@
 #FalconHoster
-=
 
 VERY simple PHP page to upload files
 
