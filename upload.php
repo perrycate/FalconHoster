@@ -3,24 +3,25 @@ session_start();
 // base uploads directory
 $basePath = "./uploads/";
 
-// each "user" should have own directory, so similarly named files don't conflict
 if( !$_SESSION["user_id"] ) {
 	// redirect to initial page if user doesn't have an id yet
 	header('Location: index.php');
 	die();
 }
-// user's directory will be their id.
+
+
+// user's folder is named based on id
 $userdir = $_SESSION["user_id"] . '/';
 $targetFolder = $basePath . $userdir;
 
-// create folder if it doesn't exist
+// make certain each user has this personal folder to avoid file conflicts
 if( !(is_dir($targetFolder)) ) {
 	mkdir($targetFolder, '766', true);
-	// make sure folder has correct permissions
+
+	// double check folder has correct permissions
 	chmod($targetFolder, 0766);
 }
 
-// actual filename
 $filename = basename( $_FILES['uploadedFile']['name'] );
 
 // move file from temp storage to permanent location in $folder
