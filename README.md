@@ -14,8 +14,4 @@ We will use this to serve PHP files in development, since we can't install WAMP 
 	'[internal ip address]/FalconHoster/uploads/[filename]'
 
 ##Notes
-:warning: DO NOT use this on a public server (eg DigitalOcean). It is horribly insecure. Just run it from someone's PC at the meetings.
-
-##To do
-- User accounts
-- Decent looking UI?
+:warning: DO NOT use this on a public server (eg DigitalOcean). It was designed to be horribly insecure. Just run it from someone's PC locally.
