@@ -22,7 +22,7 @@ if(!isset($_SESSION["user_id"])) {
 		</form>
 		<br />
 		<?php 
-            if (!isset($_SESSION["user_id"])) {
+            if (isset($_SESSION["user_id"])) {
                 echo "<a href='./uploads/" . $_SESSION["user_id"] ."'>View uploaded files</a>";
             }
         ?>
