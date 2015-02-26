@@ -14,9 +14,9 @@ else {
 <!DOCTYPE html>
 <html>
 	<head>
-        <link rel="icon" href="favicon.png">
-        <link rel="stylesheet" href="dropzone.css">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="lib/favicon.png">
+        <link rel="stylesheet" href="lib/dropzone.css">
+        <link rel="stylesheet" href="lib/styles.css">
 		<title>FalconHoster | Upload File</title>
 	</head>
 	<body>
@@ -28,7 +28,7 @@ else {
             <input type="submit" value="Upload" />
             </div>
         </form>
-        <script src="dropzone.js"></script>
+        <script src="lib/dropzone.js"></script>
         <script>
             Dropzone.options.dropzonearea = {
                 paramName: "uploadedFile",
