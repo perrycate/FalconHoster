@@ -1,0 +1,56 @@
+/* line 1, /Users/-/Documents/Projects/FalconHoster/styles.scss */
+* {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px; }
+
+/* line 6, /Users/-/Documents/Projects/FalconHoster/styles.scss */
+body {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  background: #e6e6e6; }
+
+/* line 14, /Users/-/Documents/Projects/FalconHoster/styles.scss */
+.dropzone {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 5%;
+  width: 90%;
+  height: 70%;
+  background: #e6e6e6;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease; }
+
+/* line 29, /Users/-/Documents/Projects/FalconHoster/styles.scss */
+.dropzone:hover {
+  background: gainsboro;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease; }
+
+/* line 38, /Users/-/Documents/Projects/FalconHoster/styles.scss */
+.dz-preview {
+  background: #d2d2d2 !important; }
+
+/* line 42, /Users/-/Documents/Projects/FalconHoster/styles.scss */
+h1 {
+  font-size: 2rem;
+  margin: 4rem auto;
+  text-align: center; }
+
+/* line 48, /Users/-/Documents/Projects/FalconHoster/styles.scss */
+a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding-top: 5vh; }
+
+/*# sourceMappingURL=styles.css.map */
