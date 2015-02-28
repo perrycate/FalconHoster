@@ -18,6 +18,8 @@ $targetFolder = $basePath . $userdir;
 if( !(is_dir($targetFolder)) ) {
 	mkdir($targetFolder, '766', true);
 
+	$_SESSION["has_folder"] = true;
+
 	// double check folder has correct permissions
 	chmod($targetFolder, 0766);
 }

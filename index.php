@@ -15,6 +15,13 @@ if(!isset($_SESSION["user_id"])) {
 		<title>FalconHoster | Upload File</title>
 	</head>
 	<body>
+        <?php
+        if( isset($_SESSION["has_folder"]) ) {
+            // display link to user folder if user already has files
+            echo "<a id='folderLink' href='./uploads/" . $_SESSION["user_id"]  . "''>View uploaded files</a>";
+        }
+        ?>
+
         <form enctype="multipart/form-data" action="upload.php" id="dropzonearea" class="dropzone" method="POST">
            <h1>Upload a File</h1>
             <div class="fallback"> <!--Fallback for browsers that don't support dropzone or Javascript-->
@@ -29,10 +36,13 @@ if(!isset($_SESSION["user_id"])) {
                 paramName: "uploadedFile",
                 init: function() {
                     this.on("addedfile", function(file) {
-                        var link = document.createElement("a");
-                        link.setAttribute("href", "./uploads/<?php echo $_SESSION["user_id"] ?>");
-                        link.innerHTML = "View uploaded files";
-                        document.body.appendChild(link);
+                        if( !document.getElementById("folderLink") ) {
+                            var link = document.createElement("a");
+                            link.setAttribute("href", "./uploads/<?php echo $_SESSION["user_id"] ?>");
+                            link.setAttribute("id", "folderLink")
+                            link.innerHTML = "View uploaded files";
+                            document.body.appendChild(link);
+                        }
                     });
                 }
             };
