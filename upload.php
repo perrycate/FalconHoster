@@ -3,7 +3,7 @@ session_start();
 // base uploads directory
 $basePath = "./uploads/";
 
-if( !$_SESSION["user_id"] ) {
+if( !isset($_SESSION["user_id"]) ) {
 	// redirect to initial page if user doesn't have an id yet
 	header('Location: index.php');
 	die();

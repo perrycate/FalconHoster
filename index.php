@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION["user_id"])) {
+if( !isset($_SESSION["user_id"]) ) {
 	// generate id to identify this particular user
 	$_SESSION["user_id"] = uniqid();
 	// good enough!
@@ -18,7 +18,7 @@ if(!isset($_SESSION["user_id"])) {
         <?php
         if( isset($_SESSION["has_folder"]) ) {
             // display link to user folder if user already has files
-            echo "<a id='folderLink' href='./uploads/" . $_SESSION["user_id"]  . "''>View uploaded files</a>";
+            echo "<a id='folderLink' href='./userFiles.php'>View uploaded files</a>";
         }
         ?>
 
@@ -38,7 +38,7 @@ if(!isset($_SESSION["user_id"])) {
                     this.on("addedfile", function(file) {
                         if( !document.getElementById("folderLink") ) {
                             var link = document.createElement("a");
-                            link.setAttribute("href", "./uploads/<?php echo $_SESSION["user_id"] ?>");
+                            link.setAttribute("href", "./userFiles.php");
                             link.setAttribute("id", "folderLink")
                             link.innerHTML = "View uploaded files";
                             document.body.appendChild(link);
