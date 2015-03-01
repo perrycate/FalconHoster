@@ -1,4 +1,6 @@
 <?php
+$page_title = "Upload File";
+
 session_start();
 if( !isset($_SESSION["user_id"]) ) {
 	// generate id to identify this particular user
@@ -8,11 +10,9 @@ if( !isset($_SESSION["user_id"]) ) {
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
-        <link rel="icon" href="lib/favicon.png">
-        <link rel="stylesheet" href="lib/dropzone.css">
-        <link rel="stylesheet" href="lib/styles.css">
-		<title>FalconHoster | Upload File</title>
+    <head>
+	<link rel="stylesheet" href="lib/dropzone.css">
+	<?php include 'head.php'; ?>
 	</head>
 	<body>
         <?php

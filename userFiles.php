@@ -1,4 +1,5 @@
 <?php
+$page_title = "My Files";
 session_start();
 
 if( !isset($_SESSION["user_id"]) ) {
@@ -21,11 +22,7 @@ foreach($files as $index => $name) {
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" href="lib/favicon.png">
-        <link rel="stylesheet" href="lib/styles.css">
-        <title>FalconHoster | My Files</title>
-    </head>
+    <?php include 'head.php'; ?>
     <body>
         <a href="index.php">Go Back</a>
         <h1>My Files</h>
