@@ -3,7 +3,7 @@ session_start();
 // base uploads directory
 $basePath = "./uploads/";
 
-if( !$_SESSION["user_id"] ) {
+if( !isset($_SESSION["user_id"]) ) {
 	// redirect to initial page if user doesn't have an id yet
 	header('Location: index.php');
 	die();
@@ -17,6 +17,8 @@ $targetFolder = $basePath . $userdir;
 // make certain each user has this personal folder to avoid file conflicts
 if( !(is_dir($targetFolder)) ) {
 	mkdir($targetFolder, '766', true);
+
+	$_SESSION["has_folder"] = true;
 
 	// double check folder has correct permissions
 	chmod($targetFolder, 0766);
